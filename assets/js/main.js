@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		retina_detect: !0
 	})
 
+	// document.documentElement.classList.remove('no-js');
+
 	// Select the timeline element
 	var experienceTimeline = document.getElementById('experience-timeline');
 
@@ -141,7 +143,69 @@ document.addEventListener("DOMContentLoaded", function () {
 			vtimelineBlock.appendChild(content); // Move content inside vtimeline-block
 		});
 	}
+
+	const slider = document.querySelector('.slider');
+	const prevBtn = document.querySelector('.prev-btn');
+	const nextBtn = document.querySelector('.next-btn');
+	const slides = document.querySelectorAll('.slider img');
+
+	let currentSlide = 0;
+	let slidesToShow = calculateSlidesToShow();
+
+// 초기 슬라이더 설정
+	updateSlider();
+
+	prevBtn.addEventListener('click', () => {
+		currentSlide = (currentSlide - slidesToShow + slides.length) % slides.length;
+		console.log("테스트 다음")
+		console.log(currentSlide)
+		updateSlider();
+	});
+
+	nextBtn.addEventListener('click', () => {
+		currentSlide = (currentSlide + slidesToShow) % slides.length;
+		console.log("테스트 이전")
+		console.log(currentSlide)
+		updateSlider();
+	});
+
+	window.addEventListener('resize', () => {
+		console.log("리사이즈")
+		slidesToShow = calculateSlidesToShow();
+		console.log(slidesToShow)
+		currentSlide = 0;
+		updateSlider();
+	});
+
+	function updateSlider() {
+		const slideWidth = slider.clientWidth / slidesToShow;
+		const newTranslate = -currentSlide * slideWidth;
+		slider.style.transform = `translateX(${newTranslate}px)`;
+
+		// 마지막 이미지인 경우 next 버튼을 숨깁니다.
+		if (currentSlide + slidesToShow >= slides.length) {
+			nextBtn.style.display = 'none';
+		} else {
+			nextBtn.style.display = 'block';
+		}
+
+		// 첫 번째 이미지인 경우 prev 버튼을 숨깁니다.
+		if (currentSlide === 0) {
+			prevBtn.style.display = 'none';
+		} else {
+			prevBtn.style.display = 'block';
+		}
+	}
+
+	function calculateSlidesToShow() {
+		return window.innerWidth < 976 ? 2 : 4;
+	}
+
+
+
 }, !1);
+
+
 
 // Populate timeline items dynamically
 
