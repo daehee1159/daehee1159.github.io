@@ -201,6 +201,60 @@ document.addEventListener("DOMContentLoaded", function () {
 		return window.innerWidth < 976 ? 2 : 4;
 	}
 
+	window.addEventListener('DOMContentLoaded', function () {
+		const sliderContainer = document.querySelector('#slider-container-noagri'); // 각 페이지에 고유한 ID 사용
+
+		if (!sliderContainer) return; // 해당 페이지에 슬라이더 컨테이너가 없으면 종료
+
+		const slider = sliderContainer.querySelector('.slider');
+		const prevButton = sliderContainer.querySelector('.prev-btn');
+		const nextButton = sliderContainer.querySelector('.next-btn');
+
+		// 이미지 간격 (px)
+		const slideGap = 20;
+
+		// 뷰포트 크기에 따라서 이미지 개수 결정
+		let slidesToShow = window.innerWidth < 976 ? 2 : 4;
+
+		// 화면에 보여지는 이미지 개수에 따라 슬라이더의 너비 설정
+		const slideWidth = (slider.clientWidth - (slidesToShow - 1) * slideGap) / slidesToShow;
+		slider.style.width = `${slideWidth * slider.children.length}px`;
+
+		let currentSlide = 0;
+
+		// 이전 버튼 클릭 시
+		prevButton.addEventListener('click', function () {
+			if (currentSlide > 0) {
+				currentSlide--;
+				slider.style.transform = `translateX(-${currentSlide * (slideWidth + slideGap)}px)`;
+				nextButton.style.display = 'block';
+			}
+			if (currentSlide === 0) {
+				prevButton.style.display = 'none';
+			}
+		});
+
+		// 다음 버튼 클릭 시
+		nextButton.addEventListener('click', function () {
+			if (currentSlide < slider.children.length - slidesToShow) {
+				currentSlide++;
+				slider.style.transform = `translateX(-${currentSlide * (slideWidth + slideGap)}px)`;
+				prevButton.style.display = 'block';
+			}
+			if (currentSlide === slider.children.length - slidesToShow) {
+				nextButton.style.display = 'none';
+			}
+		});
+
+		// 뷰포트 리사이즈 시 슬라이드 개수 조정
+		window.addEventListener('resize', function () {
+			slidesToShow = window.innerWidth < 976 ? 2 : 4;
+			const slideWidth = (slider.clientWidth - (slidesToShow - 1) * slideGap) / slidesToShow;
+			slider.style.width = `${slideWidth * slider.children.length}px`;
+		});
+	});
+
+
 
 
 }, !1);
