@@ -151,6 +151,7 @@ main {
 
 .slider {
     display: flex;
+    transition: transform 1.5s ease;
 }
 
 .slider img {
@@ -220,4 +221,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
