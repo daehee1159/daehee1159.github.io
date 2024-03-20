@@ -4650,7 +4650,6 @@ sub, sup {
 .footer {
     background: #1a222c;
     padding: 10px 0;
-    margin-top: 100px;
     text-align: center;
     color: #fff
 }
@@ -4700,7 +4699,8 @@ sub, sup {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid #dcd9d9
+    border-top: 1px solid #dcd9d9;
+    border-bottom: 1px solid #dcd9d9;
 }
 
 #experience h2 {
@@ -4845,7 +4845,7 @@ sub, sup {
 }
 
 .project-image {
-    float: left
+    float: left;
 }
 
 .project-info {
@@ -4890,7 +4890,7 @@ sub, sup {
 
 .heading {
     position: relative;
-    display: inline-block;
+    display: block;
     font-size: 2em;
     font-weight: 300;
     margin: 0 0 30px 0
@@ -4924,4 +4924,73 @@ sub, sup {
     }
 }
 
+/* skills */
+.skill-container {
+    border-bottom: 1px solid #dcd9d9;
+}
 
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.group {
+    margin-bottom: 40px; /* 그룹 간격을 조절할 수 있습니다. */
+    border: #dcd9d9;
+    box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.1);
+}
+
+h3 {
+    text-align: center;
+}
+
+.skills {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    text-align: center;
+    margin: 0 10px; /* 스킬 간격을 조절할 수 있습니다. */
+}
+
+.skill img {
+    max-width: 200px;
+    max-height: 120px;
+    margin-bottom: 10px;
+}
+
+/*@media only screen and (max-width: 768px) {*/
+/*    .skill {*/
+/*        text-align: center;*/
+/*        margin: 0 10px; !* 스킬 간격을 조절할 수 있습니다. *!*/
+/*    }*/
+
+/*    .skill img {*/
+/*        max-width: 200px;*/
+/*        max-height: 200px;*/
+/*        margin-bottom: 10px;*/
+/*    }*/
+/*}*/
+
+.contact-container {
+    padding: 20px;
+}
+
+.contact-container .container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
