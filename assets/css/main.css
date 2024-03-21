@@ -176,7 +176,7 @@ summary {
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 @font-face {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'FontAwesome';
     src: url(../fonts/fontawesome-webfont.eot?v=4.7.0);
     src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"), url(../fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"), url(../fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"), url(../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
     font-weight: 400;
@@ -3095,7 +3095,7 @@ summary {
 }
 
 @font-face {
-    font-family: 'Montserrat', sans-serif;
+    font-family: devicon;
     src: url(../fonts/devicon.eot?-hdf3wh);
     src: url(../fonts/devicon.eot?#iefix-hdf3wh) format("embedded-opentype"), url(../fonts/devicon.woff?-hdf3wh) format("woff"), url(../fonts/devicon.ttf?-hdf3wh) format("truetype"), url(../fonts/devicon.svg?-hdf3wh#devicon) format("svg");
     font-weight: 400;
@@ -3103,7 +3103,7 @@ summary {
 }
 
 [class*=" devicon-"], [class^=devicon-] {
-    font-family: 'Montserrat', sans-serif;
+    font-family: devicon;
     speak: none;
     font-style: normal;
     font-weight: 400;
@@ -4644,7 +4644,12 @@ sub, sup {
 
 .user-details {
     text-align: center;
-    margin: 5px auto
+    margin: 20px 0 60px 0;
+}
+
+.user-details p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .footer {
@@ -4710,7 +4715,7 @@ sub, sup {
 #experience-timeline {
     margin: 30px auto 0 auto;
     position: relative;
-    max-width: 1000px
+    max-width: 1100px
 }
 
 #experience-timeline:before {
@@ -4736,6 +4741,12 @@ sub, sup {
     top: 100%;
     left: 303px
 }
+
+#experience-timeline ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .vtimeline-content {
     margin-left: 350px;
     background: #fff;
@@ -4748,6 +4759,7 @@ sub, sup {
 .vtimeline-content h3 {
     font-size: 1.5em;
     font-weight: 300;
+    padding-top: 0;
     color: #374054;
     display: inline-block;
     margin: 0
@@ -4839,6 +4851,7 @@ sub, sup {
     position: relative;
     max-width: 900px;
     margin: 0 auto 30px auto;
+    /*padding-bottom: 10px;*/
     overflow: hidden;
     background: #fff;
     border-radius: 4px
@@ -4846,19 +4859,21 @@ sub, sup {
 
 .project-image {
     float: left;
+    width: 337px;
+    height: 337px;
 }
 
 .project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
+    margin-left: 320px;
     padding: 15px
 }
 
 .project-info h3 {
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 500;
     color: #374054;
     margin: 0 0 15px 0
 }
@@ -4867,6 +4882,15 @@ sub, sup {
     color: #74808a;
     margin: 0 0 15px 0;
     font-size: 0.9em
+}
+
+.project-info ul {
+    text-align: left;
+}
+
+.project-info ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .no-image .project-info {
@@ -4912,6 +4936,7 @@ sub, sup {
     .project-image {
         display: block;
         width: 100%;
+        margin-bottom: 10px;
     }
 
     .project-info {
@@ -4921,6 +4946,15 @@ sub, sup {
         padding: 30px 15px;
         top: auto;
         transform: none
+    }
+
+    .project-info h3 {
+        margin-top: 10px;
+    }
+
+    .project-info ul {
+        margin: 10px;
+        padding: 10px;
     }
 }
 
@@ -4986,11 +5020,17 @@ h3 {
     padding: 20px;
 }
 
-.contact-container .container{
-    max-width: 600px;
+.contact-container .container {
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    /*padding: 20px;*/
     background: #ffffff;
+    text-align: center;
     border-radius: 10px; /* 모서리를 둥글게 만듦 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.contact-info ul {
+    display: inline-block;
+    text-align: left;
 }
