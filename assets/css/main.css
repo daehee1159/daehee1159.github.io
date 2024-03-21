@@ -48,7 +48,7 @@ hr {
 }
 
 code, kbd, pre, samp {
-    font-family: monospace, monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em
 }
 
@@ -107,7 +107,7 @@ svg:not(:root) {
 }
 
 button, input, optgroup, select, textarea {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -176,7 +176,7 @@ summary {
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 @font-face {
-    font-family: 'FontAwesome';
+    font-family: 'Montserrat', sans-serif;
     src: url(../fonts/fontawesome-webfont.eot?v=4.7.0);
     src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"), url(../fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"), url(../fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"), url(../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
     font-weight: 400;
@@ -3095,7 +3095,7 @@ summary {
 }
 
 @font-face {
-    font-family: devicon;
+    font-family: 'Montserrat', sans-serif;
     src: url(../fonts/devicon.eot?-hdf3wh);
     src: url(../fonts/devicon.eot?#iefix-hdf3wh) format("embedded-opentype"), url(../fonts/devicon.woff?-hdf3wh) format("woff"), url(../fonts/devicon.ttf?-hdf3wh) format("truetype"), url(../fonts/devicon.svg?-hdf3wh#devicon) format("svg");
     font-weight: 400;
@@ -3103,7 +3103,7 @@ summary {
 }
 
 [class*=" devicon-"], [class^=devicon-] {
-    font-family: devicon;
+    font-family: 'Montserrat', sans-serif;
     speak: none;
     font-style: normal;
     font-weight: 400;
@@ -4367,7 +4367,7 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: #555;
-    font-family: 'Antic Slab', serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 article, aside, figcaption, figure, footer, header, nav, section {
