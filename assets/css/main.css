@@ -1170,8 +1170,16 @@ summary {
     content: "\f0e0"
 }
 
+.fa-blogger-b {
+    content: "\42";
+}
+
+.fa-blogger-b:before {
+    content: "\42";
+}
+
 .fa-linkedin:before {
-    content: "\f0e1"
+    content: "\f0e1";
 }
 
 .fa-rotate-left:before, .fa-undo:before {
